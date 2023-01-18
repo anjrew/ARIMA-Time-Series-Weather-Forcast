@@ -1,0 +1,658 @@
+{
+    "score": {
+        "rmse": 1.8868498837978045
+    },
+    "dataset_year_start": 1946,
+    "resample_size": 3,
+    "drop_cols": [
+        "month",
+        "SOUID",
+        "Q_TG"
+    ],
+    "train_percentage": 0.9,
+    "data_limit": 100000,
+    "resample_date_val": "M",
+    "AutoARIMA": {
+        "m": 12,
+        "d": 1,
+        "maxiter": 50,
+        "seasonal": true,
+        "start_p": 4,
+        "max_p": 4,
+        "start_q": 20,
+        "max_q": 20,
+        "stepwise": true,
+        "trace": true,
+        "test": "adf",
+        "n_jobs": 6
+    },
+    "model": {
+        "D": null,
+        "alpha": 0.05,
+        "d": 1,
+        "error_action": "trace",
+        "information_criterion": "aic",
+        "m": 12,
+        "max_D": 1,
+        "max_P": 2,
+        "max_Q": 2,
+        "max_d": 2,
+        "max_order": 5,
+        "max_p": 4,
+        "max_q": 20,
+        "maxiter": 50,
+        "method": "lbfgs",
+        "n_fits": 10,
+        "n_jobs": 6,
+        "offset_test_args": null,
+        "out_of_sample_size": 0,
+        "random": false,
+        "random_state": null,
+        "scoring": "mse",
+        "scoring_args": null,
+        "seasonal": true,
+        "seasonal_test": "ocsb",
+        "seasonal_test_args": null,
+        "start_P": 1,
+        "start_Q": 1,
+        "start_p": 4,
+        "start_params": null,
+        "start_q": 20,
+        "stationary": false,
+        "stepwise": true,
+        "suppress_warnings": true,
+        "test": "adf",
+        "trace": true,
+        "trend": null,
+        "with_intercept": "auto",
+        "report": [
+            {
+                "data": [
+                    [
+                        "Dep. Variable:",
+                        "y",
+                        "  No. Observations:  ",
+                        818
+                    ],
+                    [
+                        "Model:",
+                        "SARIMAX(4, 1, 9)x(1, 0, [], 12)",
+                        "  Log Likelihood     ",
+                        "-1720.109"
+                    ],
+                    [
+                        "Date:",
+                        "Wed, 18 Jan 2023",
+                        "  AIC                ",
+                        "3472.219"
+                    ],
+                    [
+                        "Time:",
+                        "09:21:58",
+                        "  BIC                ",
+                        "3547.509"
+                    ],
+                    [
+                        "Sample:",
+                        "0",
+                        "  HQIC               ",
+                        "3501.113"
+                    ],
+                    [
+                        "",
+                        " - 818",
+                        "                     ",
+                        " "
+                    ],
+                    [
+                        "Covariance Type:",
+                        "opg",
+                        "                     ",
+                        " "
+                    ]
+                ],
+                "output_formats": {
+                    "txt": {
+                        "fmt": "txt",
+                        "table_dec_above": "=",
+                        "table_dec_below": "=",
+                        "title_align": "c",
+                        "row_pre": "",
+                        "row_post": "",
+                        "header_dec_below": "-",
+                        "row_dec_below": null,
+                        "colwidths": 18,
+                        "colsep": " ",
+                        "data_aligns": "r",
+                        "data_fmts": [
+                            "%18s",
+                            "-%19s",
+                            "%18s",
+                            "%19s"
+                        ],
+                        "stub_align": "l",
+                        "header_align": "r",
+                        "header_fmt": "%s",
+                        "stub_fmt": "-%21s",
+                        "header": "%s",
+                        "stub": "%s",
+                        "empty_cell": "",
+                        "empty": "",
+                        "missing": "--",
+                        "stubs_align": "l"
+                    },
+                    "csv": {
+                        "fmt": "csv",
+                        "table_dec_above": null,
+                        "table_dec_below": null,
+                        "row_pre": "",
+                        "row_post": "",
+                        "header_dec_below": null,
+                        "row_dec_below": null,
+                        "title_align": "",
+                        "data_aligns": "l",
+                        "colwidths": null,
+                        "colsep": ",",
+                        "data_fmt": "%s",
+                        "data_fmts": [
+                            "%s"
+                        ],
+                        "stub_align": "l",
+                        "header_align": "c",
+                        "header_fmt": "\"%s\"",
+                        "stub_fmt": "\"%s\"",
+                        "empty_cell": "",
+                        "header": "%s",
+                        "stub": "%s",
+                        "empty": "",
+                        "missing": "--"
+                    },
+                    "html": {
+                        "table_dec_above": null,
+                        "table_dec_below": null,
+                        "header_dec_below": null,
+                        "row_dec_below": null,
+                        "title_align": "c",
+                        "colwidths": null,
+                        "colsep": " ",
+                        "row_pre": "<tr>\n  ",
+                        "row_post": "\n</tr>",
+                        "data_aligns": "c",
+                        "data_fmts": [
+                            "<td>%s</td>"
+                        ],
+                        "data_fmt": "<td>%s</td>",
+                        "stub_align": "l",
+                        "header_align": "c",
+                        "header_fmt": "<th>%s</th>",
+                        "stub_fmt": "<th>%s</th>",
+                        "empty_cell": "<td></td>",
+                        "header": "<th>%s</th>",
+                        "stub": "<th>%s</th>",
+                        "empty": "<td></td>",
+                        "missing": "<td>--</td>"
+                    },
+                    "latex": {
+                        "fmt": "ltx",
+                        "table_dec_above": "\\toprule",
+                        "table_dec_below": "\\bottomrule",
+                        "header_dec_below": "\\midrule",
+                        "row_dec_below": null,
+                        "strip_backslash": true,
+                        "row_post": "  \\\\",
+                        "data_aligns": "c",
+                        "colwidths": null,
+                        "colsep": " & ",
+                        "data_fmts": [
+                            "%s"
+                        ],
+                        "data_fmt": "%s",
+                        "stub_align": "l",
+                        "header_align": "c",
+                        "empty_align": "l",
+                        "header_fmt": "\\textbf{%s}",
+                        "stub_fmt": "\\textbf{%s}",
+                        "empty_cell": "",
+                        "header": "\\textbf{%s}",
+                        "stub": "\\textbf{%s}",
+                        "empty": "",
+                        "missing": "--",
+                        "replacements": {
+                            "#": "\\#",
+                            "$": "\\$",
+                            "%": "\\%",
+                            "&": "\\&",
+                            ">": "$>$",
+                            "_": "\\_",
+                            "|": "$|$"
+                        }
+                    }
+                },
+                "title": "SARIMAX Results"
+            },
+            {
+                "data": [
+                    [
+                        "",
+                        "coef",
+                        "std err",
+                        "z",
+                        "P>|z|",
+                        "[0.025",
+                        "0.975]"
+                    ],
+                    [
+                        "intercept",
+                        "    0.0017",
+                        "    0.002",
+                        "    0.728",
+                        " 0.467",
+                        "   -0.003",
+                        "    0.006"
+                    ],
+                    [
+                        "ar.L1",
+                        "    0.5487",
+                        "    0.496",
+                        "    1.105",
+                        " 0.269",
+                        "   -0.424",
+                        "    1.522"
+                    ],
+                    [
+                        "ar.L2",
+                        "    0.5584",
+                        "    0.452",
+                        "    1.235",
+                        " 0.217",
+                        "   -0.327",
+                        "    1.444"
+                    ],
+                    [
+                        "ar.L3",
+                        "   -0.3336",
+                        "    0.383",
+                        "   -0.872",
+                        " 0.383",
+                        "   -1.083",
+                        "    0.416"
+                    ],
+                    [
+                        "ar.L4",
+                        "   -0.4885",
+                        "    0.466",
+                        "   -1.049",
+                        " 0.294",
+                        "   -1.401",
+                        "    0.424"
+                    ],
+                    [
+                        "ma.L1",
+                        "   -1.2746",
+                        "    0.495",
+                        "   -2.575",
+                        " 0.010",
+                        "   -2.245",
+                        "   -0.304"
+                    ],
+                    [
+                        "ma.L2",
+                        "   -0.2969",
+                        "    0.795",
+                        "   -0.373",
+                        " 0.709",
+                        "   -1.856",
+                        "    1.262"
+                    ],
+                    [
+                        "ma.L3",
+                        "    0.8032",
+                        "    0.394",
+                        "    2.039",
+                        " 0.041",
+                        "    0.031",
+                        "    1.575"
+                    ],
+                    [
+                        "ma.L4",
+                        "    0.2681",
+                        "    0.756",
+                        "    0.354",
+                        " 0.723",
+                        "   -1.215",
+                        "    1.751"
+                    ],
+                    [
+                        "ma.L5",
+                        "   -0.4193",
+                        "    0.305",
+                        "   -1.373",
+                        " 0.170",
+                        "   -1.018",
+                        "    0.179"
+                    ],
+                    [
+                        "ma.L6",
+                        "   -0.0615",
+                        "    0.105",
+                        "   -0.585",
+                        " 0.559",
+                        "   -0.267",
+                        "    0.144"
+                    ],
+                    [
+                        "ma.L7",
+                        "    0.1049",
+                        "    0.071",
+                        "    1.480",
+                        " 0.139",
+                        "   -0.034",
+                        "    0.244"
+                    ],
+                    [
+                        "ma.L8",
+                        "   -0.1386",
+                        "    0.096",
+                        "   -1.447",
+                        " 0.148",
+                        "   -0.326",
+                        "    0.049"
+                    ],
+                    [
+                        "ma.L9",
+                        "    0.0405",
+                        "    0.061",
+                        "    0.663",
+                        " 0.507",
+                        "   -0.079",
+                        "    0.160"
+                    ],
+                    [
+                        "ar.S.L12",
+                        "    0.0365",
+                        "    0.049",
+                        "    0.745",
+                        " 0.456",
+                        "   -0.059",
+                        "    0.132"
+                    ],
+                    [
+                        "sigma2",
+                        "    4.0912",
+                        "    0.197",
+                        "   20.797",
+                        " 0.000",
+                        "    3.706",
+                        "    4.477"
+                    ]
+                ],
+                "output_formats": {
+                    "txt": {
+                        "fmt": "txt",
+                        "table_dec_above": "=",
+                        "table_dec_below": "=",
+                        "title_align": "c",
+                        "row_pre": "",
+                        "row_post": "",
+                        "header_dec_below": "-",
+                        "row_dec_below": null,
+                        "colwidths": 10,
+                        "colsep": " ",
+                        "data_aligns": "r",
+                        "data_fmts": [
+                            "%s",
+                            "%s",
+                            "%8s",
+                            "%s",
+                            "%11s",
+                            "%11s"
+                        ],
+                        "stub_align": "l",
+                        "header_align": "r",
+                        "header_fmt": "%s",
+                        "stub_fmt": "%s",
+                        "header": "%s",
+                        "stub": "%s",
+                        "empty_cell": "",
+                        "empty": "",
+                        "missing": "--",
+                        "stubs_align": "l"
+                    },
+                    "csv": {
+                        "fmt": "csv",
+                        "table_dec_above": null,
+                        "table_dec_below": null,
+                        "row_pre": "",
+                        "row_post": "",
+                        "header_dec_below": null,
+                        "row_dec_below": null,
+                        "title_align": "",
+                        "data_aligns": "l",
+                        "colwidths": null,
+                        "colsep": ",",
+                        "data_fmt": "%s",
+                        "data_fmts": [
+                            "%s"
+                        ],
+                        "stub_align": "l",
+                        "header_align": "c",
+                        "header_fmt": "\"%s\"",
+                        "stub_fmt": "\"%s\"",
+                        "empty_cell": "",
+                        "header": "%s",
+                        "stub": "%s",
+                        "empty": "",
+                        "missing": "--"
+                    },
+                    "html": {
+                        "table_dec_above": null,
+                        "table_dec_below": null,
+                        "header_dec_below": null,
+                        "row_dec_below": null,
+                        "title_align": "c",
+                        "colwidths": null,
+                        "colsep": " ",
+                        "row_pre": "<tr>\n  ",
+                        "row_post": "\n</tr>",
+                        "data_aligns": "c",
+                        "data_fmts": [
+                            "<td>%s</td>"
+                        ],
+                        "data_fmt": "<td>%s</td>",
+                        "stub_align": "l",
+                        "header_align": "c",
+                        "header_fmt": "<th>%s</th>",
+                        "stub_fmt": "<th>%s</th>",
+                        "empty_cell": "<td></td>",
+                        "header": "<th>%s</th>",
+                        "stub": "<th>%s</th>",
+                        "empty": "<td></td>",
+                        "missing": "<td>--</td>"
+                    },
+                    "latex": {
+                        "fmt": "ltx",
+                        "table_dec_above": "\\toprule",
+                        "table_dec_below": "\\bottomrule",
+                        "header_dec_below": "\\midrule",
+                        "row_dec_below": null,
+                        "strip_backslash": true,
+                        "row_post": "  \\\\",
+                        "data_aligns": "c",
+                        "colwidths": null,
+                        "colsep": " & ",
+                        "data_fmts": [
+                            "%s"
+                        ],
+                        "data_fmt": "%s",
+                        "stub_align": "l",
+                        "header_align": "c",
+                        "empty_align": "l",
+                        "header_fmt": "\\textbf{%s}",
+                        "stub_fmt": "\\textbf{%s}",
+                        "empty_cell": "",
+                        "header": "\\textbf{%s}",
+                        "stub": "\\textbf{%s}",
+                        "empty": "",
+                        "missing": "--",
+                        "replacements": {
+                            "#": "\\#",
+                            "$": "\\$",
+                            "%": "\\%",
+                            "&": "\\&",
+                            ">": "$>$",
+                            "_": "\\_",
+                            "|": "$|$"
+                        }
+                    }
+                },
+                "title": null
+            },
+            {
+                "data": [
+                    [
+                        "Ljung-Box (L1) (Q):",
+                        "0.12",
+                        "  Jarque-Bera (JB):  ",
+                        "43.24"
+                    ],
+                    [
+                        "Prob(Q):",
+                        "0.73",
+                        "  Prob(JB):          ",
+                        "0.00"
+                    ],
+                    [
+                        "Heteroskedasticity (H):",
+                        "0.98",
+                        "  Skew:              ",
+                        "-0.30"
+                    ],
+                    [
+                        "Prob(H) (two-sided):",
+                        "0.89",
+                        "  Kurtosis:          ",
+                        "3.96"
+                    ]
+                ],
+                "output_formats": {
+                    "txt": {
+                        "fmt": "txt",
+                        "table_dec_above": "=",
+                        "table_dec_below": "=",
+                        "title_align": "c",
+                        "row_pre": "",
+                        "row_post": "",
+                        "header_dec_below": "-",
+                        "row_dec_below": null,
+                        "colwidths": 18,
+                        "colsep": " ",
+                        "data_aligns": "r",
+                        "data_fmts": [
+                            "%18s",
+                            "-%19s",
+                            "%18s",
+                            "%19s"
+                        ],
+                        "stub_align": "l",
+                        "header_align": "r",
+                        "header_fmt": "%s",
+                        "stub_fmt": "-%21s",
+                        "header": "%s",
+                        "stub": "%s",
+                        "empty_cell": "",
+                        "empty": "",
+                        "missing": "--",
+                        "stubs_align": "l"
+                    },
+                    "csv": {
+                        "fmt": "csv",
+                        "table_dec_above": null,
+                        "table_dec_below": null,
+                        "row_pre": "",
+                        "row_post": "",
+                        "header_dec_below": null,
+                        "row_dec_below": null,
+                        "title_align": "",
+                        "data_aligns": "l",
+                        "colwidths": null,
+                        "colsep": ",",
+                        "data_fmt": "%s",
+                        "data_fmts": [
+                            "%s"
+                        ],
+                        "stub_align": "l",
+                        "header_align": "c",
+                        "header_fmt": "\"%s\"",
+                        "stub_fmt": "\"%s\"",
+                        "empty_cell": "",
+                        "header": "%s",
+                        "stub": "%s",
+                        "empty": "",
+                        "missing": "--"
+                    },
+                    "html": {
+                        "table_dec_above": null,
+                        "table_dec_below": null,
+                        "header_dec_below": null,
+                        "row_dec_below": null,
+                        "title_align": "c",
+                        "colwidths": null,
+                        "colsep": " ",
+                        "row_pre": "<tr>\n  ",
+                        "row_post": "\n</tr>",
+                        "data_aligns": "c",
+                        "data_fmts": [
+                            "<td>%s</td>"
+                        ],
+                        "data_fmt": "<td>%s</td>",
+                        "stub_align": "l",
+                        "header_align": "c",
+                        "header_fmt": "<th>%s</th>",
+                        "stub_fmt": "<th>%s</th>",
+                        "empty_cell": "<td></td>",
+                        "header": "<th>%s</th>",
+                        "stub": "<th>%s</th>",
+                        "empty": "<td></td>",
+                        "missing": "<td>--</td>"
+                    },
+                    "latex": {
+                        "fmt": "ltx",
+                        "table_dec_above": "\\toprule",
+                        "table_dec_below": "\\bottomrule",
+                        "header_dec_below": "\\midrule",
+                        "row_dec_below": null,
+                        "strip_backslash": true,
+                        "row_post": "  \\\\",
+                        "data_aligns": "c",
+                        "colwidths": null,
+                        "colsep": " & ",
+                        "data_fmts": [
+                            "%s"
+                        ],
+                        "data_fmt": "%s",
+                        "stub_align": "l",
+                        "header_align": "c",
+                        "empty_align": "l",
+                        "header_fmt": "\\textbf{%s}",
+                        "stub_fmt": "\\textbf{%s}",
+                        "empty_cell": "",
+                        "header": "\\textbf{%s}",
+                        "stub": "\\textbf{%s}",
+                        "empty": "",
+                        "missing": "--",
+                        "replacements": {
+                            "#": "\\#",
+                            "$": "\\$",
+                            "%": "\\%",
+                            "&": "\\&",
+                            ">": "$>$",
+                            "_": "\\_",
+                            "|": "$|$"
+                        }
+                    }
+                },
+                "title": ""
+            }
+        ]
+    }
+}

@@ -6,7 +6,7 @@ import datetime
 import json
 import numpy as np
 import pandas as pd
-from format import format_data_frame
+from pipelines.format import format_data_frame
 import matplotlib.pyplot as plt
 import seaborn as sns
 
